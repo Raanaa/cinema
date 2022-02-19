@@ -1,24 +1,24 @@
-# README
+# cinema_app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+import data (movies , actors ,reviews ) from .csvs files
 
-Things you may want to cover:
+## steps to run "cinema_app" locally
 
-* Ruby version
+- ###### you only have to clone this repository ::
 
-* System dependencies
+- ##### $ git clone https://github.com/Raanaa/cinema.git
 
-* Configuration
+- ##### in your project directory run ::
 
-* Database creation
+      * ##### $ bundle install
 
-* Database initialization
+      * ##### $ rake db:migrate
 
-* How to run the test suite
+##### to import csv data to your database directly just run ::
 
-* Services (job queues, cache servers, search engines, etc.)
+- ##### $ rake import_csv
 
-* Deployment instructions
+- ##### to run your local server ::
 
-* ...
+      * ##### $ rails s
+      * ##### then navigate to [ http://localhost:3000 ]
