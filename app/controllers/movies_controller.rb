@@ -2,6 +2,11 @@ class MoviesController < ApplicationController
     def index
         @movies = Movie.all
 
+        if params[:search_by_actor] and params[:search_by_actor] != ""
+            actor = Actor.where("name like ?", "%" + params[:search_by_actor] + "%").first
+            @movies = actor.present? ? actor.movies : []
+        end
+
         if params[:sort]
             movies_hash = Hash.new
             @movies.each { |m| 
