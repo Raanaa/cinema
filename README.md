@@ -21,4 +21,4 @@ import data (movies , actors ,reviews ) from .csvs files
 - ##### to run your local server ::
 
        $ rails s
-       open a browser window and navigate to [ http://localhost:3000 ]
+       open a browser window and navigate to [ http://localhost:3000/movies ]
